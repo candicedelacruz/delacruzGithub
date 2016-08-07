@@ -29,6 +29,9 @@ get_header(); ?>
 			endif;
 
 			/* Start the Loop */
+			
+			get_template_part( 'template-parts/homepage', get_post_format() );
+			
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -36,7 +39,6 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/home', get_post_format() );
 
 			endwhile;
 
@@ -44,7 +46,7 @@ get_header(); ?>
 
 		else :
 
-			get_template_part( 'template-parts/home', 'none' );
+			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
 

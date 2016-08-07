@@ -138,3 +138,18 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/*apply flexslider to the theme*/
+
+function my_add_styles() {
+    wp_enqueue_style('flexslider', get_stylesheet_directory_uri().'/css/flexslider.css');
+}
+add_action('wp_enqueue_scripts', 'my_add_styles');
+function my_add_scripts() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('flexslider', get_stylesheet_directory_uri().'/js/jquery.flexslider-min.js', array('jquery'));
+    wp_enqueue_script('flexslider-init', get_stylesheet_directory_uri().'/js/flexslider-init.js', array('jquery', 'flexslider'));
+}
+add_action('wp_enqueue_scripts', 'my_add_scripts');
+
+
