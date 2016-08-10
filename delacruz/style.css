@@ -42,14 +42,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-
+*{
+	margin: 0 !important;
+	padding: 0;
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-*{
-	margin: 0;
-	padding: 0;
-}
+
 
 html {
 	font-family: sans-serif;
@@ -542,6 +542,20 @@ a:active {
 	width: 100%;
 }
 
+ul.sub-menu
+{
+	float: none;
+	margin: auto;
+	padding-top: 1em;
+	left: 100%;
+	right: 38%;
+	width: 8em;
+}
+ul.sub-menu li
+{
+	display: inline;
+}
+
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -561,18 +575,68 @@ a:active {
 	margin: auto;
 }
 
-nav#site-navigation 
+nav#site-navigation ul#primary-menu
 {
 	position: relative;
 	text-align: center;
 	width: 100%;
 	padding: 0.825em;
-	bottom: 26em;
+	bottom: 23em;
 }
 
 nav#site-navigation li
 {
 	padding: 0 1em;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
 }
 
 /* Small menu. */
@@ -880,7 +944,28 @@ h1.site-title
 {
 	margin: auto;
 	text-align: center;
+	font-size: 2em;
+	font-weight: normal;
 }
+
+h1.site-title a
+{
+	text-decoration: none;
+}
+p.site-title
+{
+	margin: auto;
+	text-align: center;
+	font-size: 2em;
+	text-decoration: none;
+}
+p.site-title a
+{
+	text-decoration: none;
+	font-weight: normal;
+}
+}
+
 h1.site-title a
 {
 	padding: 0;
@@ -888,5 +973,202 @@ h1.site-title a
 p.site-description
 {
 	padding: 0;
+	text-align: center;
+}
+
+/*----------------------------
+		slider edits
+------------------------------*/
+
+ul.slides li.flex-active-slide
+{
+	margin: 0;
+	padding: 0;
+}
+.flex-container h1
+{
+	max-width: 100%;
+	margin: auto;
+	text-align: center;
+	padding: 0.35em 0em 0.35em 0em;
+	background-color: #444;
+	color: #fff;
+}
+div.flex-viewport
+{
+	max-width: 100%;
+	margin: 0 auto;
+}
+.flex-container 
+{
+
+}
+
+li.flex-active-slide
+{
+	margin: 0;
+	width: 100%;
+	display: inline-block;
+	float: none;
+	list-style: none;
+}
+
+li.flex-active-slide p
+{
+	width: 65%;
+	text-align: justify;
+}
+
+ul.slides li
+{
+	list-style: none;
+	width: 100%;
+}
+
+.flexslider
+{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/* slider navigation*/
+
+ol.flex-control-nav.flex-control-paging
+{
+	display: none !important;
+}
+ul.flex-direction-nav a
+{
+	list-style: none;
+	display: inline;
+	bottom: 2em;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;	
+}
+ul.flex-direction-nav
+{
+	width: 15%;
+	margin: auto auto 3em auto;
+}
+li.flex-nav-prev
+{
+	float: left;
+	padding: 0 1em;
+	margin: auto;
+	list-style: none;
+}
+
+li.flex-nav-next
+{
+	float: right;
+	padding: 0 1em;
+	margin: auto;
+	list-style: none;
+}
+
+a.flex-prev
+{
+	font-size: 3em;
+	list-style: none;
+	text-align: center;
+	color: #444;
+}
+
+a.flex-next
+{
+	font-size: 3em;
+	list-style: none;
+	text-align: center;
+	color: #444;
+}
+
+
+/*------------------------
+	Three skills edits
+------------------------*/
+
+.skillset
+{
+	width: 70%;
+	margin: auto !important;
+}
+
+
+.skills h1
+{
+	max-width: 5em;
+	margin: auto !important;
+	text-align: center;
+	padding: 0.35em 0em 0.35em 0em;
+	border: solid 0.085em black;
+}
+
+.skills h2
+{
+	min-width: 15em;
+	padding: 0;
+	margin: auto !important;
+	display: inline-block;
+	font-size: 1em;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.skills a 
+{
+	text-decoration: none !important;
+	text-align: center;
+}
+
+.skills li img
+{
+	margin: auto auto auto 2.4em !important;
+	display: inline-block;
+	width: 100%;
+}
+
+.skills li p
+{
+	margin: auto auto auto 1em !important;
+	display: inline-block;
+	width: 200px;
+}
+
+.skills li
+{
+	list-style: none;
+	max-width: 10em;
+	display: inline-block;
+	margin: auto!important;
+}
+
+li.option
+{
+	margin: 4em !important;
+	padding: 0;
+	position: relative;
+}
+
+/*navigation buttons*/
+.home .nav-links
+{
+	display: none;
+}
+
+/*footer*/
+footer#colophon 
+{
+	background-color: #444;
+	padding: 3em;
+	width: 100%;
+	height: 100%;
+	border-top: solid 5px #3fb0ac;
+}
+footer#colophon .site-info
+{
+	color: #fff;
 	text-align: center;
 }
