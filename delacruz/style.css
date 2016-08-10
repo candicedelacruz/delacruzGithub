@@ -536,26 +536,45 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	width: 100%;
-}
+/* sub menu*/
 
 ul.sub-menu
 {
 	float: none;
 	margin: auto;
-	padding-top: 1em;
 	left: 100%;
-	right: 38%;
+	right: 40%;
 	width: 8em;
+	display: none;
+	position: absolute;
+	background-color: #23282d;
+	top: 2.6em;
 }
 ul.sub-menu li
 {
-	display: inline;
+	display: inline-block;
+	position: relative;
+}
+ul.sub-menu li a
+{
+	font-size: 0.75em;
 }
 
+ul.sub-menu li a:hover
+{
+	border: none;
+	color: #3fb0ac;
+}
+.main-navigation li:hover > ul.submenu
+{
+	display: block;
+}
+
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+}
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -573,6 +592,15 @@ ul.sub-menu li
 	text-decoration: none;
 	text-align: center;
 	margin: auto;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #fff;
+	padding: 0.50em 0.65em;
+}
+
+.main-navigation a:hover {
+	border: 1px solid #fff;
+	padding: 0.45em 0.60em;
 }
 
 nav#site-navigation ul#primary-menu
@@ -581,7 +609,7 @@ nav#site-navigation ul#primary-menu
 	text-align: center;
 	width: 100%;
 	padding: 0.825em;
-	bottom: 23em;
+	bottom: 24em;
 }
 
 nav#site-navigation li
@@ -591,9 +619,8 @@ nav#site-navigation li
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
+	float: none;
 	position: absolute;
-	top: 1.5em;
 	left: -999em;
 	z-index: 99999;
 }
@@ -936,7 +963,7 @@ object {
 
 .site-branding 
 {
-	background-color: pink;
+	background-image: url(http://localhost/wordpress/wp-content/uploads/2016/08/banner-3.png);
 	padding: 10em;
 	float: none;
 }
@@ -951,6 +978,9 @@ h1.site-title
 h1.site-title a
 {
 	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 2px;
 }
 p.site-title
 {
@@ -963,17 +993,18 @@ p.site-title a
 {
 	text-decoration: none;
 	font-weight: normal;
-}
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 2px;
 }
 
-h1.site-title a
-{
-	padding: 0;
-}
 p.site-description
 {
-	padding: 0;
 	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 2px;
+	padding: 0 7em;
 }
 
 /*----------------------------
@@ -990,18 +1021,15 @@ ul.slides li.flex-active-slide
 	max-width: 100%;
 	margin: auto;
 	text-align: center;
-	padding: 0.35em 0em 0.35em 0em;
-	background-color: #444;
+	padding: 0.75em 0em 0.75em 0em;
+	background-color: #23282d;
 	color: #fff;
+	letter-spacing: 5px;
 }
 div.flex-viewport
 {
 	max-width: 100%;
 	margin: 0 auto;
-}
-.flex-container 
-{
-
 }
 
 li.flex-active-slide
@@ -1015,8 +1043,11 @@ li.flex-active-slide
 
 li.flex-active-slide p
 {
-	width: 65%;
+	width: 60%;
 	text-align: justify;
+	margin: auto !important;
+	padding: 0.65em;
+	color: #fff;
 }
 
 ul.slides li
@@ -1030,6 +1061,7 @@ ul.slides li
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	background-color: #23282d;
 }
 
 /* slider navigation*/
@@ -1073,7 +1105,7 @@ a.flex-prev
 	font-size: 3em;
 	list-style: none;
 	text-align: center;
-	color: #444;
+	color: #23282d;
 }
 
 a.flex-next
@@ -1081,7 +1113,7 @@ a.flex-next
 	font-size: 3em;
 	list-style: none;
 	text-align: center;
-	color: #444;
+	color: #23282d;
 }
 
 
@@ -1098,11 +1130,14 @@ a.flex-next
 
 .skills h1
 {
-	max-width: 5em;
 	margin: auto !important;
 	text-align: center;
 	padding: 0.35em 0em 0.35em 0em;
-	border: solid 0.085em black;
+	background-color: #23282d;
+	color: #fff;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	max-width: 15em;
 }
 
 .skills h2
@@ -1121,11 +1156,12 @@ a.flex-next
 {
 	text-decoration: none !important;
 	text-align: center;
+	color: #3fb0ac;
 }
 
 .skills li img
 {
-	margin: auto auto auto 2.4em !important;
+	margin: auto auto 1em 2.4em !important;
 	display: inline-block;
 	width: 100%;
 }
@@ -1135,6 +1171,7 @@ a.flex-next
 	margin: auto auto auto 1em !important;
 	display: inline-block;
 	width: 200px;
+	text-align: center;
 }
 
 .skills li
@@ -1158,10 +1195,28 @@ li.option
 	display: none;
 }
 
+.home a.more-link
+{
+	text-decoration: none;
+	color: #fff;
+	border: solid 1px #fff;
+	padding: 0.5em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.89em;
+}
+
+.home a.more-link:hover
+{
+	background-color: #3fb0ac;
+	color: #fff;
+	border: solid 1px #3fb0ac;
+}
+
 /*footer*/
 footer#colophon 
 {
-	background-color: #444;
+	background-color: #23282d;
 	padding: 3em;
 	width: 100%;
 	height: 100%;
@@ -1172,3 +1227,9 @@ footer#colophon .site-info
 	color: #fff;
 	text-align: center;
 }
+footer#colophon a
+{
+	color: #3fb0ac;
+	text-decoration: none;
+}
+

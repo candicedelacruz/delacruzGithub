@@ -139,9 +139,22 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-/*apply flexslider to the theme*/
+/*----------------------------------
+	edit more tag for each post
+-----------------------------------*/
 
-/*reference from https://woocommerce.com/flexslider/ and https://return-true.com/installing-woothemes-flexslider-into-your-wordpress-theme/*/
+	function modify_read_more_link() 
+	{
+		return '<br /><br /><a class="more-link" href="' . get_permalink() . '">Learn More</a>';
+	}
+		add_filter( 'the_content_more_link', 'modify_read_more_link' );
+		
+		
+/*----------------------------------
+	apply flexslider to the theme
+-----------------------------------*/
+
+/*reference from https://woocommerce.com/flexslider/ and https://return-true.com/installing-woothemes-flexslider-into-your-wordpress-theme/  */
 function my_add_styles() {
     wp_enqueue_style('flexslider', get_stylesheet_directory_uri().'/css/flexslider.css');
 }
@@ -153,5 +166,6 @@ function my_add_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_add_scripts');
 
-
+/*add theme options page*/
+require get_stylesheet_directory() . '/inc/options.php';
 

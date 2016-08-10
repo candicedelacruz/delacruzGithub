@@ -13,31 +13,31 @@
 		
 		<div class="skills">
 			
-			<h1> I AM A..</h1>
+			<h1> I am an awesome.. </h1>
 			  <ul class="skillset">
 				<li class="option"> <a href="http://localhost/wordpress/category/writing/">
 				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/Writer-e1470625579331.png" />
-				  <h2>Writer</h2>
+				  <h2>Writer</h2></a>
 				  <p>Chocolate cake powder chocolate cake pudding chupa chups cotton candy. 
 					Wafer bear claw oat cake carrot cake jelly beans toffee. Carrot 
 					cake tiramisu biscuit liquorice gummies cheesecake jelly-o.</p>
-				</li> </a>
+				</li> 
 				
 				<li class="option"><a href="http://localhost/wordpress/category/design/">
 				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/designer-e1470625606736.png" />
-				  <h2>Graphic Designer</h2>
+				  <h2>Graphic Designer</h2></a>
 				  <p>Chocolate cake powder chocolate cake pudding chupa chups cotton candy. 
 					Wafer bear claw oat cake carrot cake jelly beans toffee. Carrot 
 					cake tiramisu biscuit liquorice gummies cheesecake jelly-o.</p>
-				</li></a>
+				</li>
 				
 				<li class="option"><a href="http://localhost/wordpress/category/media/">
 				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/creator-e1470625648918.png" />
-				  <h2>Content Creator</h2>
+				  <h2>Content Creator</h2></a>
 				  <p>Chocolate cake powder chocolate cake pudding chupa chups cotton candy. 
 					Wafer bear claw oat cake carrot cake jelly beans toffee. Carrot 
 					cake tiramisu biscuit liquorice gummies cheesecake jelly-o.</p>
-				</li></a>
+				</li>
 			  </ul>
 			</div>	
 			
@@ -54,7 +54,7 @@
 						while($flex->have_posts()) : $flex->the_post();
 					?>
 					  
-					  <li> <a href="<?php get_post_permalink();?>"><?php the_post_thumbnail();?></a>
+					  <li> <?php the_post_thumbnail();?><a href="<?php get_post_permalink();?>"></a>
 						<p class="flex-caption"><?php the_content(); ?></p>
 					  </li>
 
