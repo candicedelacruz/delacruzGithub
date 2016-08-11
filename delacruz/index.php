@@ -30,7 +30,7 @@ get_header(); ?>
 
 			/* Start the Loop */
 			
-			get_template_part( 'template-parts/homepage', get_post_format() );
+			get_template_part( 'template-parts/content', get_post_format() );
 			
 			while ( have_posts() ) : the_post();
 

@@ -1,16 +1,16 @@
-<?
+<?php
 /**
  * 
  *Template Name: Delacruz homepage
  *
- * 
+ *@package Delacruz
  */
  
  get_header(); ?>
- 
- 	<div id="primary" class="content-area">
+
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		
+
 		<div class="skills">
 			
 			<h1> I am an awesome.. </h1>
@@ -18,9 +18,14 @@
 				<li class="option"> <a href="http://localhost/wordpress/category/writing/">
 				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/Writer-e1470625579331.png" />
 				  <h2>Writer</h2></a>
-				  <p>Chocolate cake powder chocolate cake pudding chupa chups cotton candy. 
-					Wafer bear claw oat cake carrot cake jelly beans toffee. Carrot 
-					cake tiramisu biscuit liquorice gummies cheesecake jelly-o.</p>
+				  <p><?php $options = get_option( 'dlcz_options_settings' );
+						echo $options['dlcz_text_field'] .'<br />';
+						if (isset($options['dlcz_checkbox_field']) == 'on')
+						{echo$options['dlcz_checkbox_field'] .'<br />';} 
+						else {echo 'off <br />';}echo$options['dlcz_radio_field'] .'<br />';
+						echo$options['dlcz_textarea_field'] .'<br />';
+						echo$options['dlcz_select_field']; ?>
+					</p>
 				</li> 
 				
 				<li class="option"><a href="http://localhost/wordpress/category/design/">
@@ -41,9 +46,7 @@
 			  </ul>
 			</div>	
 			
-			
-			
-	<!---reference from https://woocommerce.com/flexslider/ and https://return-true.com/installing-woothemes-flexslider-into-your-wordpress-theme/ -->		
+				<!---reference from https://woocommerce.com/flexslider/ and https://return-true.com/installing-woothemes-flexslider-into-your-wordpress-theme/ -->		
 				<div class="flex-container">
 				<h1> FEATURED WORK </h1>
 				  <div class="flexslider">
@@ -67,8 +70,9 @@
 				  </div>
 				</div>
 
-	
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
-  </div>
-</div>
-</div>
+<?php
+get_sidebar();
+get_footer();

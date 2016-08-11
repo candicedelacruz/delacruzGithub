@@ -963,9 +963,9 @@ object {
 
 .site-branding 
 {
-	background-image: url(http://localhost/wordpress/wp-content/uploads/2016/08/banner-3.png);
-	padding: 10em;
+	background-image: url(http://localhost/wordpress/wp-content/uploads/2016/08/banner-3.png); 
 	float: none;
+	padding: 10em;
 }
 h1.site-title
 {
