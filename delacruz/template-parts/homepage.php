@@ -13,35 +13,67 @@
 
 		<div class="skills">
 			
-			<h1> I am an awesome.. </h1>
+			<h1> 			
+				<?php
+						$options = get_option( 'dlcz_options_settings' );
+						echo $options['dlcz_radio_field']; 
+				?>
+			</h1>
 			  <ul class="skillset">
 				<li class="option"> <a href="http://localhost/wordpress/category/writing/">
 				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/Writer-e1470625579331.png" />
-				  <h2>Writer</h2></a>
-				  <p><?php $options = get_option( 'dlcz_options_settings' );
-						echo $options['dlcz_text_field'] .'<br />';
-						if (isset($options['dlcz_checkbox_field']) == 'on')
-						{echo$options['dlcz_checkbox_field'] .'<br />';} 
-						else {echo 'off <br />';}echo$options['dlcz_radio_field'] .'<br />';
-						echo$options['dlcz_textarea_field'] .'<br />';
-						echo$options['dlcz_select_field']; ?>
+				  <h2>
+					<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_title_one'];
+					?>
+				  </h2>
+				  </a>
+				  
+					<p>
+						<?php 
+							//display description about skill one
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_skill_one'];
+						?>
 					</p>
 				</li> 
 				
 				<li class="option"><a href="http://localhost/wordpress/category/design/">
 				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/designer-e1470625606736.png" />
-				  <h2>Graphic Designer</h2></a>
-				  <p>Chocolate cake powder chocolate cake pudding chupa chups cotton candy. 
-					Wafer bear claw oat cake carrot cake jelly beans toffee. Carrot 
-					cake tiramisu biscuit liquorice gummies cheesecake jelly-o.</p>
+				  <h2>
+					<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_title_two'];
+					?>
+				  </h2>
+				  </a>
+				  
+					<p>
+						<?php 
+							//display description about skill two
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_skill_two'];
+						?>
+					</p>
 				</li>
 				
 				<li class="option"><a href="http://localhost/wordpress/category/media/">
 				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/creator-e1470625648918.png" />
-				  <h2>Content Creator</h2></a>
-				  <p>Chocolate cake powder chocolate cake pudding chupa chups cotton candy. 
-					Wafer bear claw oat cake carrot cake jelly beans toffee. Carrot 
-					cake tiramisu biscuit liquorice gummies cheesecake jelly-o.</p>
+				  <h2>
+					<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_title_three'];
+					?>
+				  </h2>
+				  </a>
+					<p>
+						<?php 
+							//display description about skill three
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_skill_three'];
+						?>
+					</p>
 				</li>
 			  </ul>
 			</div>	

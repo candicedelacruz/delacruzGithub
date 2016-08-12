@@ -11,106 +11,159 @@ function dlcz_settings_init() {
 	
 	add_settings_section(
 		'dlcz_options_page_section', 
-		'Your section description', 
+		'<br />The Skillset Section', 
 		'dlcz_options_page_section_callback', 
 		'theme_options'
 	);
 	
 	function dlcz_options_page_section_callback() { 
-		echo 'A description and detail about the section.';
+		echo 'Describe your featured skill, found in the landing page';
 	}
 
+	//skillset section title
 	add_settings_field( 
-		'dlcz_text_field', 
-		'Skillset One Description', 
-		'dlcz_text_field_render', 
+		'dlcz_radio_field', 
+		'Choose a title for the section', 
+		'dlcz_radio_field_render', 
+		'theme_options', 
+		'dlcz_options_page_section'  
+	);	
+	
+	add_settings_field( 
+		'dlcz_title_customtxt', 
+		'Custom text for the section title (optional)', 
+		'dlcz_title_customtxt_render', 
+		'theme_options', 
+		'dlcz_options_page_section'  
+	);
+	
+	//skill item one
+	
+	add_settings_field( 
+		'dlcz_title_one', 
+		'<br />Skill One Title', 
+		'dlcz_title_one_render', 
 		'theme_options', 
 		'dlcz_options_page_section' 
 	);
 
 	add_settings_field( 
-		'dlcz_checkbox_field', 
-		'Check your preference', 
-		'dlcz_checkbox_field_render', 
-		'theme_options', 
-		'dlcz_options_page_section'  
-	);
-
-	add_settings_field( 
-		'dlcz_radio_field', 
-		'Choose an option', 
-		'dlcz_radio_field_render', 
+		'dlcz_skill_one', 
+		'Describe the first featured skill', 
+		'dlcz_skill_one_render', 
 		'theme_options', 
 		'dlcz_options_page_section'  
 	);
 	
 	add_settings_field( 
-		'dlcz_textarea_field', 
-		'Enter content in the textarea', 
-		'dlcz_textarea_field_render', 
+		'dlcz_title_two', 
+		'Skill Two Title', 
+		'dlcz_title_two_render', 
+		'theme_options', 
+		'dlcz_options_page_section' 
+	);
+		
+	add_settings_field( 
+		'dlcz_skill_two', 
+		'Describe the second featured skill', 
+		'dlcz_skill_two_render', 
 		'theme_options', 
 		'dlcz_options_page_section'  
 	);
 	
 	add_settings_field( 
-		'dlcz_select_field', 
-		'Choose from the dropdown', 
-		'dlcz_select_field_render', 
+		'dlcz_title_three', 
+		'Skill Three Title', 
+		'dlcz_title_three_render', 
+		'theme_options', 
+		'dlcz_options_page_section' 
+	);
+		
+	add_settings_field( 
+		'dlcz_skill_three', 
+		'Describe the third featured skill', 
+		'dlcz_skill_three_render', 
 		'theme_options', 
 		'dlcz_options_page_section'  
 	);
-
-	function dlcz_text_field_render() { 
-		$options = get_option( 'dlcz_options_settings' );
-		?>
-		<input type="text" name="dlcz_options_settings[dlcz_text_field]" value="<?php if (isset($options['dlcz_text_field'])) echo $options['dlcz_text_field']; ?>" />
-		<?php
-	}
-	
-	function dlcz_checkbox_field_render() { 
-		$options = get_option( 'dlcz_options_settings' );
-	?>
-		<input type="checkbox" name="dlcz_options_settings[dlcz_checkbox_field]" <?php if (isset($options['dlcz_checkbox_field'])) checked( 'on', ($options['dlcz_checkbox_field']) ) ; ?> value="on" />
-		<label>Turn it On</label> 
-		<?php	
-	}
-	
+	//section title render
 	function dlcz_radio_field_render() { 
 		$options = get_option( 'dlcz_options_settings' );
 		?>
-		<input type="radio" name="dlcz_options_settings[dlcz_radio_field]" 
-		<?php if (isset($options['dlcz_radio_field'])) checked( $options['dlcz_radio_field'], 1 ); ?> 
-		value="<h1>woof</h1>" /> <label>Option One</label><br />
-		
-		<input type="radio" name="dlcz_options_settings[dlcz_radio_field]" 
-		<?php if (isset($options['dlcz_radio_field'])) checked( $options['dlcz_radio_field'], 2 ); ?> 
-		value="<p>i love you</p>" /> <label>Option Two</label><br />
-		
-		
-		<input type="radio" name="dlcz_options_settings[dlcz_radio_field]" <?php if (isset($options['dlcz_radio_field'])) checked( $options['dlcz_radio_field'], 3 ); ?> value="<h1>pssst</h1>" /> <label>Option Three</label>
+			<input type="radio" name="dlcz_options_settings[dlcz_radio_field]" 
+			<?php if (isset($options['dlcz_radio_field'])) checked( $options['dlcz_radio_field'], 1 ); ?> 
+			value="I am an awesome.." /> <label>I am an awesome..</label><br />
+			
+			<input type="radio" name="dlcz_options_settings[dlcz_radio_field]" 
+			<?php if (isset($options['dlcz_radio_field'])) checked( $options['dlcz_radio_field'], 2 ); ?> 
+			value="I am a badass.." /> <label>I am a badass..</label><br />
+			
+			<input type="radio" name="dlcz_options_settings[dlcz_radio_field]" 
+			<?php if (isset($options['dlcz_radio_field'])) checked( $options['dlcz_radio_field'], 3 ); ?> 
+			value="I am a.." /> <label>I am a..</label><br />
+
+			<input type="radio" name="dlcz_options_settings[dlcz_radio_field]" 
+			<?php if (isset($options['dlcz_radio_field'])) checked( $options['dlcz_radio_field'], 3 ); ?> 
+			value="<?php $options = get_option( 'dlcz_options_settings' );
+						echo $options['dlcz_title_customtxt']; 
+					?>" /> <label>Custom Text</label>
 		<?php
 	}
 	
-	function dlcz_textarea_field_render() { 
+	function dlcz_title_customtxt_render() { 
 		$options = get_option( 'dlcz_options_settings' );
 		?>
-		<textarea cols="40" rows="5" name="dlcz_options_settings[dlcz_textarea_field]"><?php if (isset($options['dlcz_textarea_field'])) echo $options['dlcz_textarea_field']; ?></textarea>
+		<input type="text" name="dlcz_options_settings[dlcz_title_customtxt]" value="<?php if (isset($options['dlcz_title_customtxt'])) echo $options['dlcz_title_customtxt']; ?>" />
+		<?php
+	}
+	
+	//render for skill one
+	function dlcz_title_one_render() { 
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<br /><input type="text" name="dlcz_options_settings[dlcz_title_one]" value="<?php if (isset($options['dlcz_title_one'])) echo $options['dlcz_title_one']; ?>" />
+		<?php
+	}
+	
+	function dlcz_skill_one_render() { 
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<textarea cols="40" rows="5" name="dlcz_options_settings[dlcz_skill_one]"><?php if (isset($options['dlcz_skill_one'])) echo $options['dlcz_skill_one']; ?></textarea>
+		<?php
+	}
+	
+	//render for skill two
+	function dlcz_title_two_render() { 
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<input type="text" name="dlcz_options_settings[dlcz_title_two]" value="<?php if (isset($options['dlcz_title_two'])) echo $options['dlcz_title_two']; ?>" />
 		<?php
 	}
 
-	function dlcz_select_field_render() { 
+	function dlcz_skill_two_render() { 
 		$options = get_option( 'dlcz_options_settings' );
 		?>
-		<select name="dlcz_options_settings[dlcz_select_field]">
-			<option value="1" <?php if (isset($options['dlcz_select_field'])) selected( $options['dlcz_select_field'], 1 ); ?>>Option 1</option>
-			<option value="2" <?php if (isset($options['dlcz_select_field'])) selected( $options['dlcz_select_field'], 2 ); ?>>Option 2</option>
-		</select>
-	<?php
+		<textarea cols="40" rows="5" name="dlcz_options_settings[dlcz_skill_two]"><?php if (isset($options['dlcz_skill_two'])) echo $options['dlcz_skill_two']; ?></textarea>
+		<?php
 	}
-	
-	function skill_text(){
-		
+
+	//render for skill three
+		function dlcz_title_three_render() { 
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<input type="text" name="dlcz_options_settings[dlcz_title_three]" value="<?php if (isset($options['dlcz_title_three'])) echo $options['dlcz_title_three']; ?>" />
+		<?php
 	}
+
+
+	function dlcz_skill_three_render() { 
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<textarea cols="40" rows="5" name="dlcz_options_settings[dlcz_skill_three]"><?php if (isset($options['dlcz_skill_three'])) echo $options['dlcz_skill_three']; ?></textarea>
+		<?php
+	}
+
+
 	function my_theme_options_page(){ 
 		?>
 		<form action="options.php" method="post">
