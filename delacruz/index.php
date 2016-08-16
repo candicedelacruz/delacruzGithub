@@ -20,12 +20,14 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
+			if ( is_home() && ! is_front_page() ) : 
+			if(is_home() && has_post_thumbnail()) the_post_thumbnail(); ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-
+<?php the_post_thumbnail();?>
 			<?php
+			  
 			endif;
 
 			/* Start the Loop */

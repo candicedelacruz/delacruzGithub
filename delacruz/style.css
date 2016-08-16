@@ -1232,4 +1232,8 @@ footer#colophon a
 	color: #3fb0ac;
 	text-decoration: none;
 }
+/*gallery postrs edit*/
 
+.column { float: left !important; margin: 0 2.5% 1em 0 !important; width: 22.5%; }
+.column:nth-child(4n) { margin-left: 0 !important; }
+.column:nth-child(4n+1) { clear: left; }
