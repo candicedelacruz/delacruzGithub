@@ -1223,6 +1223,28 @@ li.option
 	color: #fff;
 	border: solid 1px #3fb0ac;
 }
+/* primary content, main text, archives */
+
+div#primary
+{
+	width: 70%;
+	margin: auto !important;
+}
+
+.frame
+{
+	margin: auto !important;
+	max-width: 58em;
+	max-height: 22em;
+	box-sizing: border-box !important;
+	position: relative;
+	overflow: hidden;
+}
+
+.frame img
+{
+	object-fit: cover;
+}
 
 /*footer*/
 footer#colophon 

@@ -7,6 +7,7 @@
  * @package Delacruz
  */
 
+ 
 if ( ! function_exists( 'delacruz_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -169,3 +170,27 @@ add_action('wp_enqueue_scripts', 'my_add_scripts');
 /*add theme options page*/
 require get_stylesheet_directory() . '/inc/options.php';
 
+/* customize image size */
+
+add_image_size( 'custom-size', 450, 280, true ); 
+
+/* Remmove page-title prefix. Reference from: http://wordpress.stackexchange.com/questions/179585/remove-category-tag-author-from-the-archive-title */
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() ) {
+
+            $title = single_cat_title( '', false );
+
+        } elseif ( is_tag() ) {
+
+            $title = single_tag_title( '', false );
+
+        } elseif ( is_author() ) {
+
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+
+        }
+
+    return $title;
+
+});
