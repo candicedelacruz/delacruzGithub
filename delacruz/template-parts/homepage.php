@@ -84,12 +84,12 @@
 				  <div class="flexslider">
 					<ul class="slides">
 					<?php
-					$flex = new WP_Query(array('category_name' => 'slider', 'posts_per_page' => 5));
+					$flex = new WP_Query(array('category_name' => 'slider', 'posts_per_page' => 6));
 					if($flex->have_posts()) :
 						while($flex->have_posts()) : $flex->the_post();
 					?>
 					  
-					  <li> <?php the_post_thumbnail();?><a href="<?php get_post_permalink();?>"></a>
+					  <li> <div class="slide"><?php the_post_thumbnail();?></div><a href="<?php get_post_permalink();?>"></a>
 						<p class="flex-caption"><?php the_content(); ?></p>
 					  </li>
 
@@ -106,5 +106,5 @@
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
