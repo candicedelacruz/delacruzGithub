@@ -963,7 +963,7 @@ object {
 
 .site-branding 
 {
-	background-image: url(http://localhost/wordpress/wp-content/uploads/2016/08/banner-3.png); 
+	background-image: url(img/banner.png); 
 	float: none;
 	padding: 10em;
 }
@@ -1225,9 +1225,14 @@ li.option
 }
 /* primary content, main text, archives */
 
+.home #primary
+{
+	width: 100%;
+}
+
 div#primary
 {
-	width: 70%;
+	width: 60%;
 	margin: auto !important;
 }
 
@@ -1244,6 +1249,51 @@ div#primary
 .frame img
 {
 	object-fit: cover;
+}
+
+p.paragraph.ng-attr-widget
+{
+	padding: 1.2em;
+	margin: auto;
+}
+
+a.more-link
+{
+	text-decoration: none;
+	text-transform: uppercase !important;
+	color: #fff;
+	border: solid 1px #23282d;
+	background-color: #23282d;
+	padding: 0.34em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.89em;
+	margin-left: 2em !important;
+}
+
+a.more-link:hover
+{
+	background-color: #3fb0ac;
+	color: #fff;
+	border: solid 1px #3fb0ac;
+}
+
+h2.entry-title a
+{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #21759b
+}
+
+h2.entry-title
+{
+	margin: auto;
+	text-align: center;
+}
+
+.entry-meta
+{
+	text-align: center;
 }
 
 /*footer*/
@@ -1265,7 +1315,34 @@ footer#colophon a
 	color: #3fb0ac;
 	text-decoration: none;
 }
-/*gallery postrs edit*/
+footer.entry-footer
+{
+	padding: 2em 5em 2em 5em;
+}
+
+footer.entry-footer span
+{
+	padding-left: 0.55em;
+	color: #23282d;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+footer.entry-footer span a
+{
+	color: #23282d;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+	letter-spacing: none;
+}
+
+footer.entry-footer span a:hover
+{
+	color: #facb5e;
+}
+/*gallery posts edit*/
 
 .column { float: left !important; margin: 0 2.5% 1em 0 !important; width: 22.5%; }
 .column:nth-child(4n) { margin-left: 0 !important; }

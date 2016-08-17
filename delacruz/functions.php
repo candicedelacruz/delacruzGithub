@@ -146,7 +146,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 	function modify_read_more_link() 
 	{
-		return '<br /><br /><a class="more-link" href="' . get_permalink() . '">Learn More</a>';
+		return '<br /><br /><a class="more-link" href="' . get_permalink() . '">Learn More</a></div>';
 	}
 		add_filter( 'the_content_more_link', 'modify_read_more_link' );
 		

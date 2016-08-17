@@ -46,6 +46,22 @@ function dlcz_settings_init() {
 		'theme_options', 
 		'dlcz_options_page_section' 
 	);
+	
+	add_settings_field( 
+		'dlcz_link_one', 
+		"What is the link to skill one's page?", 
+		'dlcz_link_one_render', 
+		'theme_options', 
+		'dlcz_options_page_section' 
+	);
+	
+	add_settings_field( 
+		'dlcz_img_one', 
+		'Insert Image URL to represent skill one', 
+		'dlcz_img_one_render', 
+		'theme_options', 
+		'dlcz_options_page_section' 
+	);
 
 	add_settings_field( 
 		'dlcz_skill_one', 
@@ -55,10 +71,27 @@ function dlcz_settings_init() {
 		'dlcz_options_page_section'  
 	);
 	
+	//skill item two
 	add_settings_field( 
 		'dlcz_title_two', 
 		'Skill Two Title', 
 		'dlcz_title_two_render', 
+		'theme_options', 
+		'dlcz_options_page_section' 
+	);
+		
+		add_settings_field( 
+		'dlcz_link_two', 
+		"What is the link to skill two's page?", 
+		'dlcz_link_two_render', 
+		'theme_options', 
+		'dlcz_options_page_section' 
+	);
+	
+	add_settings_field( 
+		'dlcz_img_two', 
+		'Insert Image URL to represent skill two', 
+		'dlcz_img_two_render', 
 		'theme_options', 
 		'dlcz_options_page_section' 
 	);
@@ -71,10 +104,28 @@ function dlcz_settings_init() {
 		'dlcz_options_page_section'  
 	);
 	
+	//skill item three
+	
 	add_settings_field( 
 		'dlcz_title_three', 
 		'Skill Three Title', 
 		'dlcz_title_three_render', 
+		'theme_options', 
+		'dlcz_options_page_section' 
+	);
+	
+	add_settings_field( 
+		'dlcz_link_three', 
+		"What is the link to skill three's page?", 
+		'dlcz_link_three_render', 
+		'theme_options', 
+		'dlcz_options_page_section' 
+	);
+	
+	add_settings_field( 
+		'dlcz_img_three', 
+		'Insert Image URL to represent skill three', 
+		'dlcz_img_three_render', 
 		'theme_options', 
 		'dlcz_options_page_section' 
 	);
@@ -123,6 +174,20 @@ function dlcz_settings_init() {
 		?>
 		<br /><input type="text" name="dlcz_options_settings[dlcz_title_one]" value="<?php if (isset($options['dlcz_title_one'])) echo $options['dlcz_title_one']; ?>" />
 		<?php
+	}	
+	
+	function dlcz_link_one_render() { 
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<br /><input type="text" name="dlcz_options_settings[dlcz_link_one]" value="<?php if (isset($options['dlcz_link_one'])) echo $options['dlcz_link_one']; ?>" />
+		<?php
+	}
+
+	function dlcz_img_one_render() {
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<br /><input type="text" name="dlcz_options_settings[dlcz_img_one]" value="<?php if (isset($options['dlcz_img_one'])) echo $options['dlcz_img_one']; ?>" />
+		<?php
 	}
 	
 	function dlcz_skill_one_render() { 
@@ -137,6 +202,20 @@ function dlcz_settings_init() {
 		$options = get_option( 'dlcz_options_settings' );
 		?>
 		<input type="text" name="dlcz_options_settings[dlcz_title_two]" value="<?php if (isset($options['dlcz_title_two'])) echo $options['dlcz_title_two']; ?>" />
+		<?php
+	}
+	
+	function dlcz_link_two_render() { 
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<br /><input type="text" name="dlcz_options_settings[dlcz_link_two]" value="<?php if (isset($options['dlcz_link_two'])) echo $options['dlcz_link_two']; ?>" />
+		<?php
+	}
+	
+	function dlcz_img_two_render() {
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<br /><input type="text" name="dlcz_options_settings[dlcz_img_two]" value="<?php if (isset($options['dlcz_img_two'])) echo $options['dlcz_img_two']; ?>" />
 		<?php
 	}
 
@@ -154,7 +233,20 @@ function dlcz_settings_init() {
 		<input type="text" name="dlcz_options_settings[dlcz_title_three]" value="<?php if (isset($options['dlcz_title_three'])) echo $options['dlcz_title_three']; ?>" />
 		<?php
 	}
+	
+	function dlcz_link_three_render() { 
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<br /><input type="text" name="dlcz_options_settings[dlcz_link_three]" value="<?php if (isset($options['dlcz_link_three'])) echo $options['dlcz_link_three']; ?>" />
+		<?php
+	}
 
+	function dlcz_img_three_render() {
+		$options = get_option( 'dlcz_options_settings' );
+		?>
+		<br /><input type="text" name="dlcz_options_settings[dlcz_img_three]" value="<?php if (isset($options['dlcz_img_three'])) echo $options['dlcz_img_three']; ?>" />
+		<?php
+	}
 
 	function dlcz_skill_three_render() { 
 		$options = get_option( 'dlcz_options_settings' );

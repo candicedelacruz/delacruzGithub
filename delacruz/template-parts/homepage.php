@@ -20,8 +20,16 @@
 				?>
 			</h1>
 			  <ul class="skillset">
-				<li class="option"> <a href="http://localhost/wordpress/category/writing/">
-				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/Writer-e1470625579331.png" />
+				<li class="option"> <a href="			
+					<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_link_one'];
+					?>">
+				  <img src="<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_img_one'];
+						?>" 
+					alt="infographic that shows a laptop"/>
 				  <h2>
 					<?php
 							$options = get_option( 'dlcz_options_settings' );
@@ -39,8 +47,15 @@
 					</p>
 				</li> 
 				
-				<li class="option"><a href="http://localhost/wordpress/category/design/">
-				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/designer-e1470625606736.png" />
+				<li class="option"><a href="		
+					<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_link_two'];
+					?>">
+				  <img src="<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_img_two'];
+						?>" " />
 				  <h2>
 					<?php
 							$options = get_option( 'dlcz_options_settings' );
@@ -58,8 +73,15 @@
 					</p>
 				</li>
 				
-				<li class="option"><a href="http://localhost/wordpress/category/media/">
-				  <img src="http://localhost/wordpress/wp-content/uploads/2016/08/creator-e1470625648918.png" />
+				<li class="option"><a href="			
+					<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_link_three'];
+					?>">
+				  <img src="<?php
+							$options = get_option( 'dlcz_options_settings' );
+							echo $options['dlcz_img_three'];
+						?>" " />
 				  <h2>
 					<?php
 							$options = get_option( 'dlcz_options_settings' );
