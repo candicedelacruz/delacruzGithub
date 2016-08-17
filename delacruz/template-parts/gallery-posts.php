@@ -15,9 +15,13 @@
 		<?php
 			$paged = ( get_query_var( 'paged') ) ? get_query_var( 'paged' ) : 1;
 			$args = array(
-					'cat' => 225, 
-					'showposts' => 6, 
-					'order' => 'ASC',
+					'cat' => 0, 
+					'showposts' => 9, 
+					'category' => 0,
+					'orderby' => 'post_date',
+					'order' => 'DESC',
+					'post_type' => 'post',
+					'suppress_filters' => true,
 					'paged' => $paged
 			);
 			query_posts($args);
@@ -54,17 +58,16 @@
 	
 		</div><!-- .column -->
 	
-<?php endwhile; endif; ?>
-
-		<div id="querynavigation">
-		<div class="nav-previous"><?php next_posts_link( 'Prev', $customquery->max_num_pages ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( 'Next' , $customquery->max_num_pages ); ?></div></div>	
-		</div>
-			
-			
-		</main><!-- #main -->
+<?php endwhile; endif; ?>			
+		
+		</main><!-- #main -->		
 	</div><!-- #primary -->
-
+			
+			<div id="querynavigation">
+		<div class="nav-previous"><?php next_posts_link( 'Prev', $customquery->max_num_pages ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( 'Next' , $customquery->max_num_pages ); ?></div>	
+			</div>
+			
 <?php
-get_sidebar();
+
 get_footer();

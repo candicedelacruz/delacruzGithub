@@ -104,6 +104,8 @@ add_action( 'widgets_init', 'delacruz_widgets_init' );
  */
 function delacruz_scripts() {
 	wp_enqueue_style( 'delacruz-style', get_stylesheet_uri() );
+		wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Pacifico|Megrim|Raleway|Rock+Salt');
+     wp_enqueue_style( 'googleFonts');
 
 	wp_enqueue_script( 'delacruz-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
