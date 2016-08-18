@@ -1217,21 +1217,74 @@ li.option
 
 #querynavigation
 {
-	margin-top: 50% auto auto auto !important;
-	width: 50%;
+	margin: 30% auto auto auto !important;
+	width: 15%;
 	padding: 1em;
 	position: relative;
+	right: 1em;
 }
 
-.nav-next
+.nav-links
+{
+	width: 40%;
+	margin: auto !important;
+}
+.nav-next a
 {
 	float: right;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0.22em 0.65em;
+	border: 1px solid #23282d;
+	color: #23282d;
+	margin: auto auto 3em auto !important;
+	font-size: 15px;
+	letter-spacing: 2px;
 }
 
-.nav-previous
+.nav-previous a
 {
 	float: left;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0.22em 0.65em;
+	background-color: #23282d;
+	border: 1px solid #23282d;
+	color: #fff;
+	margin: auto auto 3em auto !important;
+	font-size: 15px;
+	letter-spacing: 2px;
 }
+
+.nav-previous a:hover, .nav-next a:hover
+{
+	background-color: #3fb0ac;
+	color: #fff;
+	border: 1px solid #3fb0ac;
+}
+
+a.more-link
+{
+	text-decoration: none;
+	text-transform: uppercase !important;
+	color: #fff;
+	border: solid 1px #23282d;
+	background-color: #23282d;
+	padding: 0.34em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.89em;
+	margin-left: 2em !important;
+}
+
+a.more-link:hover
+{
+	background-color: #3fb0ac;
+	color: #fff;
+	border: solid 1px #3fb0ac;
+}
+
+
 
 /* primary content, main text, archives */
 
@@ -1272,25 +1325,15 @@ p.paragraph.ng-attr-widget
 	margin: auto;
 }
 
-a.more-link
+.entry-header h1
 {
-	text-decoration: none;
-	text-transform: uppercase !important;
-	color: #fff;
-	border: solid 1px #23282d;
-	background-color: #23282d;
-	padding: 0.34em;
 	text-transform: uppercase;
+	color: #23282d;
+	padding: 0.25em;
+	border-bottom: solid 2px #23282d;
 	letter-spacing: 2px;
-	font-size: 0.89em;
-	margin-left: 2em !important;
-}
-
-a.more-link:hover
-{
-	background-color: #3fb0ac;
-	color: #fff;
-	border: solid 1px #3fb0ac;
+	font-size: 2.4em;
+	text-align: center;
 }
 
 h1.page-title
@@ -1305,7 +1348,7 @@ h1.page-title
 	text-transform: uppercase;
 }
 
-h2.entry-title a
+ h2.entry-title a
 {
 	text-decoration: none;
 	text-transform: uppercase;
@@ -1314,6 +1357,7 @@ h2.entry-title a
 	border-bottom: 2px solid #23282d;
 	letter-spacing: 2px;
 	font-size: 1.3em;
+	text-align: center;
 }
 
 h2.entry-title
@@ -1327,6 +1371,211 @@ h2.entry-title
 	text-align: center;
 	padding: 1em;
 }
+
+.single-post main#main, .page-template-default main#main
+{
+	width: 75%;
+	float: left;
+}
+
+.single-post #primary, .page-template-default #primary
+{
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: 75%;
+}
+
+.single-post .nav-links
+{
+	width: 50%;
+}
+
+.single-post .nav-next a, 
+.single-post .nav-previous a
+{
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+/*comment section*/
+p.comment-form-comment label
+{
+	text-transform: uppercase;
+	padding: 0.65em;
+	letter-spacing: 5px;
+	font-weight: bold;
+}
+
+h3#reply-title
+{
+	padding: 0.065em 0.65em 0 0.65em;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background-color: #23282d;
+	border-bottom: solid 5px #3fb0ac;
+	color: #fff;
+	font-size: 2em;
+}
+
+div#respond 
+{
+	padding: 1em;
+}
+
+p.logged-in-as
+{
+	text-align: center;
+	padding: 0.65em;
+}
+
+p.logged-in-as a
+{
+	text-decoration: none;
+	color: #3fb0ac;
+	padding: 0.095em;
+}
+
+p.logged-in-as a:hover
+{
+	background-color: #3fb0ac;
+	color: #fff;
+}
+
+.entry-meta span
+{
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.entry-meta a
+{
+	color: #3fb0ac;
+	text-decoration: none;
+	text-transform: none;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+.entry-meta a:hover
+{
+	color: #c08829;
+}
+
+h2.comments-title
+{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-bottom: solid 2px #23282d;
+}
+
+#comments ol.comment-list li
+{
+	list-style-type: none;
+}
+
+ol.comment-list
+{
+	padding: 1em;
+}
+
+ol.comment-list .comment-metadata
+{
+	padding: 0.065em 1em 0.65em 2em;
+}
+
+ol.comment-list a
+{
+	font-size: 14px;
+	text-decoration: none;
+	color: #3fb0ac;
+}
+
+ol.comment-list a:hover
+{
+	color: #c08829;
+}
+
+a.comment-edit-link
+{
+	color: #23282d !important;
+}
+ol.comment-list p
+{
+	padding:  0em 1em 1em 3em;
+}
+
+a.comment-reply-link
+{
+	padding: 0.65em;
+	text-transform: uppercase;
+	color: #23282d !important;
+	letter-spacing: 5px;
+	font-weight: bold;
+}
+
+a.comment-reply-link:hover
+{
+	background-color: #23282d;
+	color: #fff!important;
+}
+
+/*sidebar*/
+aside#secondary
+{
+	width: 30%;
+	float: right;
+	margin: 5em auto auto auto !important;
+	padding-left: 2em;
+	padding-right: 5em;
+}
+
+aside#secondary section
+{
+	padding: 1em 2em 1em 1em;
+	margin: auto !important;
+}
+
+aside#secondary section input.search-field
+{
+	width: 70%;
+}
+
+aside#secondary section select
+{
+	margin: auto !important;
+}
+
+aside#secondary section li
+{
+	list-style-type: none;
+}
+
+aside#secondary section a
+{
+	color: #3fb0ac;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+aside#secondary section a:hover
+{
+	color: #c08829;
+}
+
+h2.widget-title
+{
+	text-transform: uppercase;
+	font-size: 15px;
+	color: #fff;
+	background-color: #23282d;
+	border-bottom: solid 3px #3fb0ac;
+	padding: 0.65em 0.65em 0em 0.65em;
+	letter-spacing: 2px;
+}
+
+
 
 /*footer*/
 footer#colophon 
@@ -1361,13 +1610,20 @@ footer.entry-footer span
 	letter-spacing: 1px;
 }
 
-footer.entry-footer span a
+footer.entry-footer a.post-edit-link
+{
+	text-transform: uppercase;
+	text-align: center !important;
+}
+
+footer.entry-footer a
 {
 	color: #23282d;
 	font-weight: normal;
 	text-transform: none;
 	text-decoration: none;
 	letter-spacing: none;
+	text-align: center;
 }
 
 footer.entry-footer span a:hover
@@ -1381,20 +1637,73 @@ span.comments-link a
 	font-weight: bold !important;
 	letter-spacing: 1px !important;
 }
+
+span.comments-link a:hover
+{
+	color: #3fb0ac!important;
+}
 /*gallery posts edit*/
 
-.column 
+.gallery 
 { 
 	float: left !important; 
-	margin: 0 2.5% 1em 0 !important; 
-	width: 30.25%; 
+	margin: 0 2.5% 2em 0 !important; 
+	max-width: 30.25%; 
+	max-height: 9em;
+	box-sizing: border-box !important;
+	position: relative;
+	overflow: hidden;
 }
 
-.column:nth-child(3n) 
+.gallery:nth-child(3n) 
 { 
 	margin-left: 0 !important; 
 }
-.column:nth-child(3n+1) 
+.gallery:nth-child(3n+1) 
 { 
 	clear: left; 
+}
+
+.frame img
+{
+	object-fit: cover;
+}
+
+/* css code reference from https://wordpress.org/support/topic/showing-post-title-as-overlay-on-featured-image-on-hover */
+.hover 
+{
+	float: left;
+	margin: auto;
+	position: relative; 
+}
+
+.hover:hover 
+{
+	opacity: 100; 
+	filter: alpha(opacity=100);
+	-webkit-transition: opacity .15s linear;	
+}
+.hover #texth 
+{ 
+	visibility: hidden; 
+	position: absolute; 
+	top: 10%; 
+}
+
+.hover:hover #texth
+{ 
+	visibility: visible; 
+}
+
+#texth
+{
+	background-color: #23282d;
+	color: #ffffff;
+	padding: 0px 5px 5px 0px;
+	font-size: 14px;
+	margin-top: 100px;
+	min-width: 200px;
+	padding: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
 }

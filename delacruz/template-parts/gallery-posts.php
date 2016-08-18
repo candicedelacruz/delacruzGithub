@@ -35,7 +35,7 @@
 			
 		?>
 
-		<div class="column">
+		<div class="gallery">
 	
 	<article id="post-<?php the_ID(); ?>"
 		<?php post_class(); ?>>
@@ -56,7 +56,7 @@
 	
 	</article>
 	
-		</div><!-- .column -->
+		</div><!-- .gallery -->
 	
 <?php endwhile; endif; ?>			
 		
